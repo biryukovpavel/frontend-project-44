@@ -1,9 +1,8 @@
 import { cons } from '@hexlet/pairs';
-import game from '../index.js';
+import { game, getRandomNumber } from '../index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const getRandomNumber = (min = 1, max = 100) => Math.floor(Math.random() * (max - min)) + min;
 const isEven = (number) => number % 2 === 0;
 const getCorrectAnswer = (question) => (isEven(question) ? 'yes' : 'no');
 
