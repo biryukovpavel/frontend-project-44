@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import { game, getRandomNumber } from '../index.js';
+import { startGame, getRandomNumber } from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
@@ -27,8 +27,8 @@ const getQuestionAndAnswer = () => {
   return cons(question, correctAnswer);
 };
 
-const progressionGame = () => {
-  game(description, getQuestionAndAnswer);
+const startProgressionGame = () => {
+  startGame(description, getQuestionAndAnswer);
 };
 
-export default progressionGame;
+export default startProgressionGame;

@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import { game, getRandomNumber } from '../index.js';
+import { startGame, getRandomNumber } from '../index.js';
 
 const description = 'What is the result of the expression?';
 
@@ -20,8 +20,8 @@ const getQuestionAndAnswer = () => {
   }
 };
 
-const calcGame = () => {
-  game(description, getQuestionAndAnswer);
+const startCalcGame = () => {
+  startGame(description, getQuestionAndAnswer);
 };
 
-export default calcGame;
+export default startCalcGame;
