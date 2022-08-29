@@ -16,7 +16,7 @@ const getQuestionAndAnswer = () => {
     case 2:
       return cons(`${firstNumber} * ${secondNumber}`, firstNumber * secondNumber);
     default:
-      return null;
+      throw new Error(`Unknown operation: '${operation}'!`);
   }
 };
 
