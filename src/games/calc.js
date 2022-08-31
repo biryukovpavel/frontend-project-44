@@ -7,14 +7,17 @@ const description = 'What is the result of the expression?';
 const getQuestionAndAnswer = () => {
   const firstNumber = getRandomNumber();
   const secondNumber = getRandomNumber();
-  const operation = getRandomNumber(0, 3);
+
+  const operations = ['+', '-', '*'];
+  const operationIndex = getRandomNumber(0, 3);
+  const operation = operations[operationIndex];
 
   switch (operation) {
-    case 0:
+    case '+':
       return cons(`${firstNumber} + ${secondNumber}`, firstNumber + secondNumber);
-    case 1:
+    case '-':
       return cons(`${firstNumber} - ${secondNumber}`, firstNumber - secondNumber);
-    case 2:
+    case '*':
       return cons(`${firstNumber} * ${secondNumber}`, firstNumber * secondNumber);
     default:
       throw new Error(`Unknown operation: '${operation}'!`);
