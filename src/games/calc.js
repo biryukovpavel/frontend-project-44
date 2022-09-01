@@ -9,7 +9,7 @@ const getQuestionAndAnswer = () => {
   const secondNumber = getRandomNumber();
 
   const operations = ['+', '-', '*'];
-  const operationIndex = getRandomNumber(0, 3);
+  const operationIndex = getRandomNumber(0, operations.length);
   const operation = operations[operationIndex];
 
   switch (operation) {
