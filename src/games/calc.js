@@ -4,6 +4,19 @@ import getRandomNumber from '../helpers.js';
 
 const description = 'What is the result of the expression?';
 
+const calculateExpression = (operation, firstNumber, secondNumber) => {
+  switch (operation) {
+    case '+':
+      return firstNumber + secondNumber;
+    case '-':
+      return firstNumber - secondNumber;
+    case '*':
+      return firstNumber * secondNumber;
+    default:
+      throw new Error(`Unknown operation: '${operation}'!`);
+  }
+};
+
 const getQuestionAndAnswer = () => {
   const firstNumber = getRandomNumber();
   const secondNumber = getRandomNumber();
@@ -12,16 +25,10 @@ const getQuestionAndAnswer = () => {
   const operationIndex = getRandomNumber(0, operations.length);
   const operation = operations[operationIndex];
 
-  switch (operation) {
-    case '+':
-      return cons(`${firstNumber} + ${secondNumber}`, firstNumber + secondNumber);
-    case '-':
-      return cons(`${firstNumber} - ${secondNumber}`, firstNumber - secondNumber);
-    case '*':
-      return cons(`${firstNumber} * ${secondNumber}`, firstNumber * secondNumber);
-    default:
-      throw new Error(`Unknown operation: '${operation}'!`);
-  }
+  const question = `${firstNumber} ${operation} ${secondNumber}`;
+  const correctAnswer = calculateExpression(operation, firstNumber, secondNumber);
+
+  return cons(question, correctAnswer);
 };
 
 const startCalcGame = () => {
