@@ -14,7 +14,8 @@ const startGame = (description, getQuestionAndAnswer) => {
     const question = car(questionAndAnswer);
     const correctAnswer = cdr(questionAndAnswer);
 
-    const answer = readlineSync.question(`Question: ${question}\nYour answer: `);
+    console.log(`Question: ${question}`);
+    const answer = readlineSync.question('Your answer: ');
 
     if (String(correctAnswer) === String(answer)) {
       console.log('Correct!');
