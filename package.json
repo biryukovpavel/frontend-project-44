@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "type": "module",
   "description": "The set of console games based on popular mobile apps for brain training",
   "bin": {
