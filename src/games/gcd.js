@@ -17,7 +17,7 @@ const getQuestionAndAnswer = () => {
   const secondNumber = getRandomNumber();
 
   const question = `${firstNumber} ${secondNumber}`;
-  const correctAnswer = getGcd(firstNumber, secondNumber);
+  const correctAnswer = String(getGcd(firstNumber, secondNumber));
 
   return cons(question, correctAnswer);
 };

@@ -21,7 +21,7 @@ const getQuestionAndAnswer = () => {
   const hiddenElementIndex = getRandomNumber(0, length - 1);
 
   const progression = getProgression(firstElement, step, length);
-  const correctAnswer = progression[hiddenElementIndex];
+  const correctAnswer = String(progression[hiddenElementIndex]);
   progression[hiddenElementIndex] = '..';
   const question = progression.join(' ');
 

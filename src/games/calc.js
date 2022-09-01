@@ -26,7 +26,7 @@ const getQuestionAndAnswer = () => {
   const operation = operations[operationIndex];
 
   const question = `${firstNumber} ${operation} ${secondNumber}`;
-  const correctAnswer = calculateExpression(operation, firstNumber, secondNumber);
+  const correctAnswer = String(calculateExpression(operation, firstNumber, secondNumber));
 
   return cons(question, correctAnswer);
 };
